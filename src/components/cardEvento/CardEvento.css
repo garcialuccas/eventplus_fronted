@@ -1,0 +1,57 @@
+:root {
+    --cinza-claro: #ded9da;
+    --branco: #ffffff;
+    --cor-texto: #17143f;
+    --vermelho: #b51d44;
+    --vermelho-escuro: #821b47;
+    --azul-claro: rgba(0, 80, 251, 0.1);
+}
+
+.home-evento-card {
+    border: 1px solid var(--vermelho-escuro);
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.home-evento-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.home-evento-card span {
+    background-color: var(--azul-claro);
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    width: max-content;
+}
+
+.home-evento-card h3,
+.home-evento-card p,
+.home-evento-card span,
+.home-evento-card button {
+    margin: 12px 16px;
+}
+
+.home-evento-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.home-evento-card-info-botao {
+    color: #b51d44;
+    background-color: var(--branco);
+    font-size: 20px;
+    border: none;
+    margin: 7.5%;
+    margin: 12px 16px;
+    text-decoration: none;
+}

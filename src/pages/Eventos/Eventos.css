@@ -1,0 +1,51 @@
+:root {
+    --cinza-claro: #ded9da;
+    --branco: #ffffff;
+    --cor-texto: #17143f;
+    --vermelho: #b51d44;
+    --vermelho-escuro: #821b47;
+    --azul-claro: rgba(0, 80, 251, 0.1);
+}
+
+.section-eventos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 32px;
+    padding: 32px;
+}
+
+.eventos-botoes {
+    max-width: 1200px;
+    display: flex;
+    width: 63%;
+    gap: 10px;
+}
+
+.eventos-lista {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 32px;
+}
+
+.eventos-botao-categoria {
+    border-radius: 15px;
+    padding: 7px;
+    background: var(--vermelho);
+    color: var(--branco);
+    border: 0px;
+}
+
+.eventos-botao-categoria.ativo {
+    border-radius: 15px;
+    padding: 7px;
+    background: var(--vermelho-escuro);
+    color: var(--branco);
+    border: 0px;
+}
