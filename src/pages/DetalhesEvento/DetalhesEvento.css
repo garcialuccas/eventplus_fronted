@@ -1,0 +1,41 @@
+.evento-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.evento-total {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    width: 60%;
+    gap: 10%;
+}
+
+.evento-comentario-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+}
+
+.evento-botoes {
+    display: flex;
+    gap: 10%;
+    align-items: start;
+    width: 100%;
+}
+
+.evento-informacoes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.evento-informacoe-item {
+    display: flex;
+    align-items: center;
+}

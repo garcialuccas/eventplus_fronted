@@ -1,0 +1,20 @@
+.botao {
+    border-radius: 15px;
+    padding: 7px;
+    background: var(--branco);
+    color: black;
+    border: 0px;
+}
+
+.botao:hover {
+    background: var(--vermelho-escuro);
+    color: var(--branco);
+}
+
+.botao.ativo {
+    border-radius: 15px;
+    padding: 7px;
+    background: var(--vermelho);
+    color: var(--branco);
+    border: 0px;
+}

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import type { Evento, TipoEvento } from "../../Types/api";
 import { eventoService, tipoEventoService } from "../../service/EventPlusService";
 import CardEvento from "../../components/cardEvento/CardEvento";
+import Botao from "../../components/botao/botao";
 
 function Eventos() {
 
@@ -38,10 +39,10 @@ function Eventos() {
             <main>
                 <section className="section-eventos">
                     <div className="eventos-botoes">
-                        <button className={`eventos-botao-categoria ${categoria === "" ? "ativo" : ""}`} onClick={() => setCategoria("")}>Todos</button>
+                        <Botao className={`eventos-botao-categoria ${categoria === "" ? "ativo" : ""}`} onClick={() => setCategoria("")} texto="Todos"/>
                         {
                             tiposEventos.map((te) => (
-                                <button className={`eventos-botao-categoria ${categoria === te.tituloTipoEvento ? "ativo" : ""}`} onClick={() => setCategoria(te.tituloTipoEvento)}>{te.tituloTipoEvento}</button>
+                                <Botao className={`eventos-botao-categoria ${categoria === te.tituloTipoEvento ? "ativo" : ""}`} onClick={() => setCategoria(te.tituloTipoEvento)}>{te.tituloTipoEvento}</Botao>
                             ))
                         }
                     </div>
