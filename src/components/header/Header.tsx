@@ -1,23 +1,41 @@
-import { Link, NavLink } from "react-router-dom"
-import "./Header.css"
+import { Link, NavLink, useNavigate } from "react-router-dom"
+
 import logoEvent from "../../assets/logo1.svg"
+import "./Header.css"
+import { useAuth } from "../../context/auth"
 
 function Header() {
+    const { autenticado, logout } = useAuth();
+
+    const navigate = useNavigate();
+
+    function sair() {
+        logout();
+        navigate("/Login");
+    }
+
     return (
         <header className="header">
             <div className="header-conteudo">
-                <Link to="/Home">
+                <Link to="/home">
                     <img src={logoEvent} alt="Logo Event+" />
                 </Link>
 
                 <nav>
-                    <NavLink to="/Home">Home</NavLink>
-                    <NavLink to="/Eventos">Eventos</NavLink>
-                    <NavLink to="/Usuarios">Usuarios</NavLink>
-                    <Link to="#Contato">Contato</Link>
+                    <NavLink to="/home">Home</NavLink>
+                    <NavLink to="/eventos">Eventos</NavLink>
+                    <NavLink to="/usuario">Usuarios</NavLink>
+                    <Link to="/home#contato">Contatos</Link>
                 </nav>
 
-                <Link to="/Login" className="header-botao-login">Entrar</Link>
+                {autenticado ?
+                    <>
+                        <Link to="/conta">Minha Conta</Link>
+                        <Link onClick={sair} to="/login">Sair</Link>
+                    </>
+                    :
+                    <Link to="/login">Entrar</Link>
+                }
             </div>
         </header>
     )

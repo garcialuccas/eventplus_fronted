@@ -3,7 +3,11 @@ export interface TipoEvento {
     tituloTipoEvento: string;
 }
 
-export interface insituticao {
+export interface TipoEventoPayLoad {
+    tituloTipoEvento: string
+}
+
+export interface Insituticao {
     idInstituicao: string;
     cnpj: string;
     nomeFantasia: string;
@@ -19,7 +23,7 @@ export interface Evento {
     idTipoEvento?: string | null;
     idInstituicao?: string | null;
     idTipoEventoNavigation?: TipoEvento | null;
-    idInsituicaoNavigation?: insituticao | null;
+    idInsituicaoNavigation?: Insituticao | null;
 }
 
 export interface Comentario {
@@ -50,6 +54,10 @@ export interface TipoUsuario {
     usuario: Usuario[];
 }
 
+export interface TipoUsuarioPayLoad {
+    tituloTipoUsuario : string
+}
+
 export interface Presenca {
     idPresenca: string;
     situacao: boolean;
@@ -74,8 +82,26 @@ export interface AuthSession extends LoginResponse {
     usuario: Usuario;
 }
 
-export interface PresencaPayLoad {
+export interface PresencaPayload {
     situacao: boolean;
     idEvento: string;
     idUsuario: string | null;
+}
+
+export interface ComentarioPayload{
+    descricao: string;
+    idEvento: string;
+    idUsuario: string | null;
+}
+
+export interface MensagemModeracao{
+    mensagem: string;
+    motivo?: string;
+}
+
+export interface UsuarioPayLoad {
+    nome: string,
+    email: string,
+    senha: string,
+    idTipoUsuario: string | null;
 }

@@ -22,5 +22,5 @@ button,
 input,
 select,
 textarea{
-  font: inherit,
+  font: inherit;
 }

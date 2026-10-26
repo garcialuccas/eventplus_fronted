@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import "./Home.css";
 import Header from "../../components/header/Header";
 import visaoimg from "../../assets/visaoimg.jpeg";
@@ -15,7 +14,7 @@ function Home() {
 
     useEffect(() => {
         async function carregar() {
-            const dados = await eventoService.listar_proximos()
+            const dados = await eventoService.listarProximos()
             setEventos(dados)
         }
         void carregar();
